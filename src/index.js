@@ -23,16 +23,10 @@ const invokeAction = async ({action,id,name,email,phone}) => {
     const newContact = await contacts.addContact({name,email,phone});
     return console.log(newContact);
     
-    
-
     default:
-        break;
+    console.warn('\x1B[31m Unknown action type!');
  }
 };
-// invokeAction({action:"read"})
-// invokeAction({action:"getById", id:"05olLMgyVQdWRwgKfg5J6"})
-
-// invokeAction({action:"add", name:"JAlex",email:"envkt@example.com", phone:"1234567890"})
 
 program
   .option("-a, --action <type>", "choose action")
