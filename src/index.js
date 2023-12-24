@@ -1,4 +1,3 @@
-// const { program } = require("commander");
 const contacts = require('./contacts-services/contacts.js');
 const {program} = require("commander");
 
